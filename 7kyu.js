@@ -88,3 +88,29 @@ const getZodiacSign = (day, month) => {
   }
 
   
+// Given a list of integers, determine whether the sum of its elements is odd or even.
+// Give your answer as a string matching "odd" or "even".
+// If the input array is empty consider it as: [0] (array with a zero).
+function oddOrEven(array) {
+    //enter code here
+   const reducer = array.reduce((a,b)=>a+b,0)
+   if(reducer%2 == 0 ){
+     return "even"
+   }else{
+     return "odd"
+   }
+ }
+
+//In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+function filter_list(l) {
+    // Return a new array with the strings filtered out
+    const arrOfNums = [];
+    for (let element of l) {
+      if (typeof element == "number") {
+        arrOfNums.push(element);
+      } else {
+        continue;
+      }
+    }
+    return arrOfNums;
+  }
