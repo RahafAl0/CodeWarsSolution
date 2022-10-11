@@ -21,6 +21,7 @@ Math.radians = function(degrees){
  Math.degrees = function(radians){
    return Math.round((radians * 180 / Math.PI) * 100) / 100 + 'deg';
  }
+ 
 
 //  Task:
 // Given a list of integers, determine whether the sum of its elements is odd or even.
@@ -48,3 +49,14 @@ function isPangram(string){
   }
   return containedInString.every(val => val == true)
 }
+
+// Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
+
+// Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
+var countBits = function(n) {
+  // Program Me
+  const r = (n).toString(2).split('');
+  const b = r.reduce((sum, num) => sum + Number(num), 0);
+  return b
+
+};
